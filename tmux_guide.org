@@ -6,6 +6,36 @@
 TMUX is a terminal multiplexer.  Here is a demo
 https://youtu.be/gmjyMxezIWU?t=187
 
+** Spawning new shells
+
+Bash will source different files at startup based on presence of one of
+- =~/.profile=
+- =~/.bashrc=
+- =~/.bash_profile=
+- =~/.bash_login=
+and whether it was invoked as a /login shell/.  This feature was created to
+permit different being sourced depending on whether bash is ivoked through a
+remote ssh connection.
+
+These days, the feature mostly serves to confuse people.
+
+Anyway, in your =.tmux.conf=, you can set a the command to run when creating new
+shells.  This is where you tell tmux to start new shells as login shells.
+
+This is the =default-command= setting and this is what you can put in your
+=.tmux.conf=:
+
+#+BEGIN_SRC tmux.conf
+set -g default-command "/bin/bash -l"
+#+END_SRC
+
+or something like this:
+#+BEGIN_SRC tmux.conf
+set -g default-command "env -i LOGNAME=$LOGNAME USER=$LOGNAME HOME=$HOME TERM=xterm DISPLAY=:0.0 LANG=$LANG /bin/bash -l"
+#+END_SRC
+
+This setting is equivalent to putting something a Konsole profile.
+
 ** The defaults suck, use community defaults
 
 These should really go in your tmux.conf

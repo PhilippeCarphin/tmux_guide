@@ -1,0 +1,81 @@
+
+* TMUX guide
+
+** Intro
+
+TMUX is a terminal multiplexer.  Here is a demo
+https://youtu.be/gmjyMxezIWU?t=187
+
+** The defaults suck, use community defaults
+
+These should really go in your tmux.conf
+
+#+BEGIN_SRC tmux.conf
+set -g prefix C-a
+bind C-a send-keys C-a
+
+set -g default-terminal "screen-256color"
+bind c   new-window
+bind /   split-window -h
+bind '-' split-window -v
+#+END_SRC
+
+Unlike taking somebody's =vimrc=, these are widespread community defaults that
+are shown in the first chapters of books on TMUX as the first thing you should
+do.
+
+It is quite common for Linux users to remap their CapsLock key to function as a
+CTRL key which is why TMUX users set CTRL-A as their prefix.
+
+To be more general, I will write =prefix C-j= to mean =C-a C-j=.
+
+#+BEGIN_SRC tmux.conf
+bind k selectp -U # switch to panel Up
+bind j selectp -D # switch to panel Down 
+bind h selectp -L # switch to panel Left
+bind l selectp -R # switch to panel Right
+
+# resize panes like vim
+bind -r C-h resize-pane -L 4 
+bind -r C-l resize-pane -R 4 
+bind -r C-j resize-pane -D 4 
+bind -r C-k resize-pane -U 4
+#+END_SRC
+
+Note: When resizing, you can do =prefix C-j C-j C-j ...= to resize multiple times
+as long as you go fast enough.
+
+** Scrolling
+
+To scroll in a pane, activate scrolling mode using =prefix [=.  You can use Vim
+keybindings to move your cursor.
+
+Please trust me on this: TMUX scrolling is better than scrolling your shell with
+the mouse wheel once you are used to it and if you use these tips:
+
+Use =C-u= and =C-d= instead of just doing =prefix [= and using the mouse wheel
+and use =j,k= to move up and down single lines.
+
+It's so fast!  You write a command, hit =enter=, then =prefix [ C-u C-u C-u=.
+
+** Maximize panes
+
+Use =prefix z= to maximize the current pane.
+
+** Selecting text, copying and pasting
+
+If you have multiple panes, a mouse selection may span across panes.  Maximize
+the current pane to avoid this.
+
+If you are copying and pasting between two things in the same tmux session,
+consider using TMUX's copying and pasting features.
+
+When in =prefix [= mode use vim style selection commands, when you like your
+selection, hit =enter=.  You are now out of scrolling mode.
+
+At this point, doing =prefix ]= will paste what was copied into the current pane.
+** More info
+
+I have this book, it's very good
+
+ https://www.amazon.ca/dp/1680502212/ref=cm_sw_em_r_mt_dp_U_pBRCEbJS1NMYP

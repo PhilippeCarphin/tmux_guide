@@ -38,11 +38,6 @@ This is the =default-command= setting and this is what you can put in your
 =.tmux.conf=:
 
 #+BEGIN_SRC tmux.conf
-set -g default-command "/bin/bash -l"
-#+END_SRC
-
-or something like this:
-#+BEGIN_SRC tmux.conf
 set -g default-command "env -i LOGNAME=$LOGNAME USER=$USER HOME=$HOME TERM=$TERM DISPLAY=$DISPLAY LANG=$LANG /bin/bash -l"
 #+END_SRC
 

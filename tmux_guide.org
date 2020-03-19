@@ -43,7 +43,7 @@ set -g default-command "/bin/bash -l"
 
 or something like this:
 #+BEGIN_SRC tmux.conf
-set -g default-command "env -i LOGNAME=$LOGNAME USER=$LOGNAME HOME=$HOME TERM=xterm DISPLAY=:0.0 LANG=$LANG /bin/bash -l"
+set -g default-command "env -i LOGNAME=$LOGNAME USER=$LOGNAME HOME=$HOME TERM=$TERM DISPLAY=$DISPLAY LANG=$LANG /bin/bash -l"
 #+END_SRC
 
 This setting is equivalent to putting something a Konsole profile.

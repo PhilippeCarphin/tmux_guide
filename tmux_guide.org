@@ -115,7 +115,7 @@ At this point, doing =prefix ]= will paste what was copied into the current pane
 
 I have this book, it's very good
 
- https://www.amazon.ca/dp/1680502212/ref=cm_sw_em_r_mt_dp_U_pBRCEbJS1NMYP
+ [[https://www.amazon.ca/dp/1680502212/ref=cm_sw_em_r_mt_dp_U_pBRCEbJS1NMYP]]
 
 ** =oh-my-tmux=
 

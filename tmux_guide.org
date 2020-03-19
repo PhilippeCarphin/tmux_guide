@@ -14,8 +14,7 @@ Bash will source different files at startup based on presence of one of
 - =~/.bash_profile=
 - =~/.bash_login=
 and whether it was invoked as a /login shell/.  This feature was created to
-permit different being sourced depending on whether bash is ivoked through a
-remote ssh connection.
+permit different files being sourced depending on whether bash is ivoked through an ssh connection.
 
 These days, the feature mostly serves to confuse people.
 

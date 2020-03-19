@@ -14,8 +14,10 @@ shells are on the machine where you started your tmux session.  What a life chan
 You can also detach from a tmux session and reconnect to it later.  If you have
 all your shells setup in your perfect way, you can just detatch.  Then when you
 log back into work tomorrow, you can reattach to that session with your shells
-alive and well as if you had never left.  Or if your connection fails, you may
+alive and well as if you had never left^*.  Or if your connection fails, you may
 just be able to log back in and reattach to your session.
+
+(*) Some machines have a cap on CPU time or wallclock time for some processes so YMMV depending on the machine.
 
 ** Spawning new shells
 

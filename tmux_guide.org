@@ -126,4 +126,4 @@ at the end of =.tmux.conf.local=
 
 I have the stuff from the proposed =.tmux.conf= at the end of my own
 =.tmux.conf.local= (which can be found at
-https://github.com/philippecarphin/configurations/blob/master/tmux_home/)
+[[https://github.com/philippecarphin/configurations/blob/master/tmux_home/]])

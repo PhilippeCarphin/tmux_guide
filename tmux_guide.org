@@ -3,8 +3,19 @@
 
 ** Intro
 
-TMUX is a terminal multiplexer.  Here is a demo
-[[https://youtu.be/gmjyMxezIWU?t=187]]
+Here is a demo [[https://youtu.be/gmjyMxezIWU?t=187]] by some guy, start it while you read this.
+
+TMUX is a command line program.  You open up a shell somewhere, perhaps you then
+ssh into another machine, and then you start =tmux=.
+
+This stars a tmux session. When Tmux creates new shells (as in the video), these
+shells are on the machine where you started your tmux session.  What a life changer!
+
+You can also detach from a tmux session and reconnect to it later.  If you have
+all your shells setup in your perfect way, you can just detatch.  Then when you
+log back into work tomorrow, you can reattach to that session with your shells
+alive and well as if you had never left.  Or if your connection fails, you may
+just be able to log back in and reattach to your session.
 
 ** Spawning new shells
 

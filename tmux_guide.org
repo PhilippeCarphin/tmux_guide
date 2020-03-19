@@ -119,7 +119,7 @@ I have this book, it's very good
 
 ** =oh-my-tmux=
 
-Oh My Tmux is a popular tmux config https://github.com/gpakosz/.tmux and it is
+Oh My Tmux is a popular tmux config [[https://github.com/gpakosz/.tmux]] and it is
 what I currently use.  All you have to do is grab his =.tmux.conf= and
 =.tmux.conf.local= and put them in you =$HOME=.  You can then put your own stuff
 at the end of =.tmux.conf.local=

@@ -111,6 +111,31 @@ When in =prefix [= mode use vim style selection commands, when you like your
 selection, hit =enter=.  You are now out of scrolling mode.
 
 At this point, doing =prefix ]= will paste what was copied into the current pane.
+** TMUX Pair programming (screen sharing)
+
+The linchpin of this mechanism is that both users must have access to a file
+that allows users to connect to a tmux session.
+
+WARNING: This is exactly like giving the other person a keyboard and there is no
+"master" of a tmux session just like there is no "master" keyboard on a computer.
+Access to the tmux session is only controlled by who has access to the machine
+where the file is and access to the file itself.
+
+*** Person 1
+
+#+BEGIN_SRC sh
+tmux -S <socket_file>
+chmod 777 <socket_file>
+#+END_SRC
+
+*** Person 2
+
+#+BEGIN_SRC sh
+ssh <same_machine_as_person1>
+tmux -S <socket_file> attach
+#+END_SRC
+
+
 ** More info
 
 I have this book, it's very good

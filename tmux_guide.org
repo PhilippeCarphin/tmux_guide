@@ -79,3 +79,14 @@ At this point, doing =prefix ]= will paste what was copied into the current pane
 I have this book, it's very good
 
  https://www.amazon.ca/dp/1680502212/ref=cm_sw_em_r_mt_dp_U_pBRCEbJS1NMYP
+
+** =oh-my-tmux=
+
+Oh My Tmux is a popular tmux config https://github.com/gpakosz/.tmux and it is
+what I currently use.  All you have to do is grab his =.tmux.conf= and
+=.tmux.conf.local= and put them in you =$HOME=.  You can then put your own stuff
+at the end of =.tmux.conf.local=
+
+I have the stuff from the proposed =.tmux.conf= at the end of my own
+=.tmux.conf.local= (which can be found at
+https://github.com/philippecarphin/configurations/blob/master/tmux_home/)

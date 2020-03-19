@@ -4,7 +4,7 @@
 ** Intro
 
 TMUX is a terminal multiplexer.  Here is a demo
-https://youtu.be/gmjyMxezIWU?t=187
+[[https://youtu.be/gmjyMxezIWU?t=187]]
 
 ** Spawning new shells
 
